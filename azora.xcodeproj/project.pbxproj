@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7127CC32262EF71400AEC9C3 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7127CC31262EF71300AEC9C3 /* HeaderCell.xib */; };
 		7127CC35262EF96D00AEC9C3 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127CC34262EF96D00AEC9C3 /* HeaderCell.swift */; };
+		7127CC47262F35AF00AEC9C3 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7127CC46262F35AF00AEC9C3 /* PostCell.xib */; };
+		7127CC4A262F3A5900AEC9C3 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127CC49262F3A5900AEC9C3 /* PostCell.swift */; };
 		71E4E4E6262461450077EC5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E4E4E5262461450077EC5E /* AppDelegate.swift */; };
 		71E4E4E8262461450077EC5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E4E4E7262461450077EC5E /* SceneDelegate.swift */; };
 		71E4E4EA262461450077EC5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E4E4E9262461450077EC5E /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 		58E7594136E738AD507E843B /* Pods-azora.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-azora.debug.xcconfig"; path = "Target Support Files/Pods-azora/Pods-azora.debug.xcconfig"; sourceTree = "<group>"; };
 		7127CC31262EF71300AEC9C3 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		7127CC34262EF96D00AEC9C3 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		7127CC46262F35AF00AEC9C3 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		7127CC49262F3A5900AEC9C3 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		71E4E4E2262461450077EC5E /* azora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = azora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E4E4E5262461450077EC5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71E4E4E7262461450077EC5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 			children = (
 				7127CC31262EF71300AEC9C3 /* HeaderCell.xib */,
 				7127CC34262EF96D00AEC9C3 /* HeaderCell.swift */,
+				7127CC46262F35AF00AEC9C3 /* PostCell.xib */,
+				7127CC49262F3A5900AEC9C3 /* PostCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -166,6 +172,7 @@
 			files = (
 				7127CC32262EF71400AEC9C3 /* HeaderCell.xib in Resources */,
 				71E4E4F2262461470077EC5E /* LaunchScreen.storyboard in Resources */,
+				7127CC47262F35AF00AEC9C3 /* PostCell.xib in Resources */,
 				71E4E4EF262461470077EC5E /* Assets.xcassets in Resources */,
 				71E4E4ED262461450077EC5E /* Main.storyboard in Resources */,
 			);
@@ -224,6 +231,7 @@
 				71E4E4EA262461450077EC5E /* ViewController.swift in Sources */,
 				71E4E4E6262461450077EC5E /* AppDelegate.swift in Sources */,
 				71E4E4E8262461450077EC5E /* SceneDelegate.swift in Sources */,
+				7127CC4A262F3A5900AEC9C3 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

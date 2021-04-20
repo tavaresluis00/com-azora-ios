@@ -20,11 +20,9 @@ class ViewController: UIViewController {
     private func configureTableView(){
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.separatorInset = .zero
         self.tableView.separatorStyle = .none
-        //self.tableView.separatorColor = .darkGray
         self.tableView.register(UINib(nibName: "HeaderCell", bundle: nil), forCellReuseIdentifier: "headercell")
-        //self.tableView.separatorEffect = .some(UIVisualEffect()) //*****WORK THIS OUT*****// 
+        self.tableView.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "postcell")
         self.view.addSubview(self.tableView)
     }
 }
@@ -32,33 +30,37 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate{
         
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if indexPath.row == 0 {
-            return 100
-        } else if indexPath.row == 1{
-            return 150
-        } else {
-            return 250
-        }
-        
+       return 550
     }
 }
 
 extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 100
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "headercell", for: indexPath) as! HeaderCell
-            return cell
-        } else {
-            return UITableViewCell()
-        }
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "postcell") as! PostCell
+        return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let header = UIView()
+        if section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "headercell") as! HeaderCell
+            return cell
+        }
+        return header
+    }
+    
 }
 
