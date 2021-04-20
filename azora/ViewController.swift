@@ -21,8 +21,9 @@ class ViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.separatorInset = .zero
-        self.tableView.separatorStyle = .singleLine
-        self.tableView.separatorColor = .darkGray
+        self.tableView.separatorStyle = .none
+        //self.tableView.separatorColor = .darkGray
+        self.tableView.register(UINib(nibName: "HeaderCell", bundle: nil), forCellReuseIdentifier: "headercell")
         //self.tableView.separatorEffect = .some(UIVisualEffect()) //*****WORK THIS OUT*****// 
         self.view.addSubview(self.tableView)
     }
@@ -31,7 +32,15 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate{
         
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        
+        if indexPath.row == 0 {
+            return 100
+        } else if indexPath.row == 1{
+            return 150
+        } else {
+            return 250
+        }
+        
     }
 }
 
@@ -41,7 +50,14 @@ extension ViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "headercell", for: indexPath) as! HeaderCell
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+        
     }
 
 }
